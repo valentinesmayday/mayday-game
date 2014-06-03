@@ -1,3 +1,4 @@
+
 _ENV = {
 	_G		= _G,
 	require 	= require,
@@ -22,11 +23,15 @@ if not sf.current_node then
 end
 
 function on_draw()
-	if p        then  p:draw(400, 100) end
-	if a1       then a1:draw(100,  50) end
-	if a2       then a2:draw(100,  80) end
+	if p        then  p:draw(400, 220) end
+	if a1       then a1:draw(50,  50) end
+	if a2       then a2:draw(50,  80) end
+	if a3		then a3:draw(50,  110) end
+	if a4		then a4:draw(50,  140) end
+	if a5		then a5:draw(50,  170) end
 	if b1       then b1:draw()         end
 	if b2       then b2:draw()         end
+	if b3		then b3:draw()		   end
 	if exit_btn then exit_btn:draw()   end
 end
 
@@ -42,10 +47,15 @@ function hide()
 	p                = nil
         a1               = nil
         a2               = nil
-        b1               = nil
+       a3				= nil
+	   a4               = nil 
+	   a5               = nil
+   	    b1               = nil
         b2               = nil
+		b3			     = nil
         c1               = nil
-        c2               = nil
+        c2          	 = nil
+		c3               = nil
         f1               = nil
         f2               = nil
 	_G.on_draw       = nil
@@ -68,7 +78,7 @@ function on_touch(x, y)
 end
 
 function show()
-	exit_btn        = Button.create_from_text('Exit', 40, 400)
+	exit_btn        = Button.create_from_text('Exit', 40, 420)
 	_G.on_draw      = on_draw
 	_G.on_touch     = on_touch
 	_G.on_keydown_r = on_keydown_r
@@ -108,13 +118,18 @@ function goto_node(node)
 
 	a1 = env.a1 and textures.text(env.a1, dialog_font)
 	a2 = env.a2 and textures.text(env.a2, dialog_font)
+	a3 = env.a3 and textures.text(env.a3, dialog_font)
+	a4 = env.a4 and textures.text(env.a4, dialog_font)
+	a5 = env.a5 and textures.text(env.a5, dialog_font)
+	
 
 	b1 = env.b1 and Button.create_from_text('a) ' .. env.b1, 50, 300)
 	b2 = env.b2 and Button.create_from_text('b) ' .. env.b2, 50, 340)
+	b3 = env.b3 and Button.create_from_text('c) ' .. env.b3, 50, 380)
 
 	c1 = b1 and env.c1 
 	c2 = b2 and env.c2 
-
+	c3 = b3 and env.c3
 	f1 = c1 and env.f1
 	f2 = c2 and env.f2
 

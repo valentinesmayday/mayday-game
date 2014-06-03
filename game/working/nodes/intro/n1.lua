@@ -1,8 +1,8 @@
 p = 'Nathan'
 m = 'Overworld'
 
-a1 = 'You made me angry, you know.'
+a1 = 'what should I do?'
 
-b1 = "I'm sorry.  I didn't know that. It was an accident."
+b1 = "Call"
 
 c1 = 'intro/n2'
