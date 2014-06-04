@@ -1,11 +1,13 @@
-p = 'Cara'
+p = 'Nathan'
 m = 'Overworld'
 
-a1 = "I think he's not angry with me."
+a1 = 'You: Hey Brad, do you know what kind of'
+a2 = '   music your sister likes?'
+a3 = 'Brad: I do not know. Most of her music is pretty lame.'
+a4 = '   Maybe try talking to her friend.'
+a5 = 'You: Can I get some kind of idea? I am in a hurry!'
 
-b1 = "Go to the dining hall."
-b2 = "Go to the library."
+b1 = 'Continue'
 
-c1 = 'end'
-c2 = 'library/entrance'
+c1 = 'intro/n2_1_1'
 

@@ -1,11 +1,11 @@
 p = 'Nathan'
 m = 'Overworld'
 
-a1 = 'Here is the situation, it is Febuary 13th, you have'
-a2 = 'realized you forgot to get a present for your girlfriend'
-a3 = 'you messed up last year and got a crappy last minute gift,'
-a4 = 'you cannot let that happen again especially since she has'
-a5 = 'been talking about how great her present is for you'
+a1 = 'Here is the situation, Michael: It is Febuary 13th. You'
+a2 = 'forgot to get a present for your girlfriend, Holly.'
+a3 = 'You messed up last year and got a crappy last minute gift.'
+a4 = 'You cannot let that happen again, especially since she has'
+a5 = 'been talking about how great her present is for you.'
 
 b1 = "Continue"
 

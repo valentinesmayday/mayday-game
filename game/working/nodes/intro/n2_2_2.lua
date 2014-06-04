@@ -1,0 +1,12 @@
+p = 'Cara'
+m = 'Overworld'
+
+a1 = 'Lola: Hmmm... Lately we have been listening to Katy Perry,'
+a2 = '  Rihanna, Miley, One Direction, P!nk, Justin Timberlake,'
+a3 = '  Robin Thicke, Pharrell Williams...'
+a4 = 'You: Uh... basically every pop artist out there..?'
+a5 = 'Lola: Well if you had done this sooner...'
+
+b1 = 'Continue'
+
+c1 = 'intro/n2_2_3'

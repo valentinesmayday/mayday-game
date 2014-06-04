@@ -58,6 +58,7 @@ function hide()
 		c3               = nil
         f1               = nil
         f2               = nil
+	f3		= nil
 	_G.on_draw       = nil
 	_G.on_touch      = nil
 	_G.on_keydown_r  = nil
@@ -74,6 +75,9 @@ function on_touch(x, y)
 	elseif b2 and b2:contains(x, y) then 
 		if f2 then f2() end
 		goto_node(c2) 
+	elseif b3 and b3:contains(x, y) then
+		if f3 then f3() end
+		goto_node(c3)
 	end
 end
 
@@ -132,6 +136,7 @@ function goto_node(node)
 	c3 = b3 and env.c3
 	f1 = c1 and env.f1
 	f2 = c2 and env.f2
+	f3 = c3 and env.f3
 
 	if not env.m then 
 		m  = nil
