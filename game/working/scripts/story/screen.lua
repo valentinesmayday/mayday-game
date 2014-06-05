@@ -24,14 +24,16 @@ end
 
 function on_draw()
 	if p        then  p:draw(400, 220) end
-	if a1       then a1:draw(50,  50) end
-	if a2       then a2:draw(50,  80) end
-	if a3		then a3:draw(50,  110) end
-	if a4		then a4:draw(50,  140) end
-	if a5		then a5:draw(50,  170) end
+	if a1       then a1:draw(50,  50)  end
+	if a2       then a2:draw(50,  80)  end
+	if a3	    then a3:draw(50,  110) end
+	if a4	    then a4:draw(50,  140) end
+	if a5	    then a5:draw(50,  170) end
+	if a6	    then a6:draw(400, 450) end
 	if b1       then b1:draw()         end
 	if b2       then b2:draw()         end
-	if b3		then b3:draw()		   end
+	if b3	    then b3:draw()	   end
+	if b4	    then b4:draw()	   end
 	if exit_btn then exit_btn:draw()   end
 end
 
@@ -47,18 +49,21 @@ function hide()
 	p                = nil
         a1               = nil
         a2               = nil
-       a3				= nil
-	   a4               = nil 
-	   a5               = nil
-   	    b1               = nil
+        a3		 = nil
+	a4               = nil 
+	a5               = nil
+	a6		 = nil
+   	b1               = nil
         b2               = nil
-		b3			     = nil
+	b3		 = nil
+	b4		 = nil
         c1               = nil
         c2          	 = nil
-		c3               = nil
+	c3               = nil
+	c4		 = nil
         f1               = nil
         f2               = nil
-	f3		= nil
+	f3		 = nil
 	_G.on_draw       = nil
 	_G.on_touch      = nil
 	_G.on_keydown_r  = nil
@@ -78,11 +83,14 @@ function on_touch(x, y)
 	elseif b3 and b3:contains(x, y) then
 		if f3 then f3() end
 		goto_node(c3)
+	elseif b4 and b4:contains(x, y) then
+		if f4 then f4() end
+		goto_node(c4)
 	end
 end
 
 function show()
-	exit_btn        = Button.create_from_text('Exit', 40, 420)
+	exit_btn        = Button.create_from_text('Exit', 40, 450)
 	_G.on_draw      = on_draw
 	_G.on_touch     = on_touch
 	_G.on_keydown_r = on_keydown_r
@@ -125,18 +133,22 @@ function goto_node(node)
 	a3 = env.a3 and textures.text(env.a3, dialog_font)
 	a4 = env.a4 and textures.text(env.a4, dialog_font)
 	a5 = env.a5 and textures.text(env.a5, dialog_font)
+	a6 = env.a6 and textures.text(env.a6, dialog_font)
 	
 
 	b1 = env.b1 and Button.create_from_text('a) ' .. env.b1, 50, 300)
 	b2 = env.b2 and Button.create_from_text('b) ' .. env.b2, 50, 340)
 	b3 = env.b3 and Button.create_from_text('c) ' .. env.b3, 50, 380)
+	b4 = env.b4 and Button.create_from_text('d) ' .. env.b4, 50, 420)
 
 	c1 = b1 and env.c1 
 	c2 = b2 and env.c2 
 	c3 = b3 and env.c3
+	c4 = b4 and env.c4
 	f1 = c1 and env.f1
 	f2 = c2 and env.f2
 	f3 = c3 and env.f3
+	f4 = c4 and env.f4
 
 	if not env.m then 
 		m  = nil
@@ -156,6 +168,7 @@ function goto_node(node)
 
 	sf.current_node = node
 end
+		
 
 return {
 	show = show
